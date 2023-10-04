@@ -1,0 +1,3 @@
+[build]
+command = "npm run build"  # Use your Vite build command
+publish = "frontend/dist"          # Use your Vite build output directory
