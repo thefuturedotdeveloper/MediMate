@@ -67,7 +67,7 @@ const AppointmentForm = (props) => {
             }
 
             //Handling Data Updation
-            const result = await fetch(`http://localhost:3000/api/v1${window.location.pathname}/bookings`, {
+            const result = await fetch(`https://medimate-qdye.onrender.com/api/v1${window.location.pathname}/bookings`, {
                 method: 'POST',
                 body: JSON.stringify(updateAppointments),
                 headers: {
@@ -103,7 +103,7 @@ const AppointmentForm = (props) => {
         const fetchData = async () => {
             var userId = localStorage.getItem('user-info') != null ? JSON.parse(localStorage.getItem('user-info')).id : ''
             var token = localStorage.getItem('user-info') != null ? JSON.parse(localStorage.getItem('user-info')).token : ''
-            const result = await fetch(`http://localhost:3000/api/v1/users/${userId}`, {
+            const result = await fetch(`https://medimate-qdye.onrender.com/api/v1/users/${userId}`, {
                 method: 'GET',
                 headers: {
                     "Authorization": `Bearer ${token}`

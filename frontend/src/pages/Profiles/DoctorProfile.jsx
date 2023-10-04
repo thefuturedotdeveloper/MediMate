@@ -17,7 +17,7 @@ const DoctorProfile = (props) => {
     var userId = JSON.parse(localStorage.getItem('user-info')).id
     var token = JSON.parse(localStorage.getItem('user-info')).token
 
-    var result = await fetch(`http://localhost:3000/api/v1/doctors/${userId}`, {
+    var result = await fetch(`https://medimate-qdye.onrender.com/api/v1/doctors/${userId}`, {
       method: 'GET',
     }).then((res) => { return res.json() })
 
@@ -41,7 +41,7 @@ const DoctorProfile = (props) => {
     const userId = JSON.parse(localStorage.getItem('user-info')).id
     const token = JSON.parse(localStorage.getItem('user-info')).token
     if (confirm("Are you sure you want to delete the Account")) {
-      var result = await fetch(`http://localhost:3000/api/v1/doctors/${userId}`, {
+      var result = await fetch(`https://medimate-qdye.onrender.com/api/v1/doctors/${userId}`, {
         method: "DELETE",
         headers: {
           "Content-Type": 'application/json',

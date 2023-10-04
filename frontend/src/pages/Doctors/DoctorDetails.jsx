@@ -16,7 +16,7 @@ const DoctorsDetails = () => {
     useEffect(() => {
         const populateData = async () => {
 
-            var result = await fetch(`http://localhost:3000/api/v1${window.location.pathname}`).then((res) => { return res.json() })
+            var result = await fetch(`https://medimate-qdye.onrender.com/api/v1${window.location.pathname}`).then((res) => { return res.json() })
 
             setloader(false)
             setdoctorData(result.data)

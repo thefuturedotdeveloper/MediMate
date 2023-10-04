@@ -126,7 +126,7 @@ const DoctorProfileSettings = (props) => {
         console.log(updateData)
 
         //Handling Data Updation
-        const result = await fetch(`http://localhost:3000/api/v1/doctors/${userId}`, {
+        const result = await fetch(`https://medimate-qdye.onrender.com/api/v1/doctors/${userId}`, {
             method: 'PUT',
             body: JSON.stringify(updateData),
             headers: {

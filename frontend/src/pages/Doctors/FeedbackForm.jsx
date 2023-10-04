@@ -26,7 +26,7 @@ const FeedbackForm = () => {
             }
 
             //Handling Data Updation
-            const result = await fetch(`http://localhost:3000/api/v1${window.location.pathname}/reviews`, {
+            const result = await fetch(`https://medimate-qdye.onrender.com/api/v1${window.location.pathname}/reviews`, {
                 method: 'POST',
                 body: JSON.stringify(reviewData),
                 headers: {

@@ -18,7 +18,7 @@ const UserProfile = (props) => {
         var userId = JSON.parse(localStorage.getItem('user-info')).id
         var token = JSON.parse(localStorage.getItem('user-info')).token
 
-        var result = await fetch(`http://localhost:3000/api/v1/users/${userId}`, {
+        var result = await fetch(`https://medimate-qdye.onrender.com/api/v1/users/${userId}`, {
             method: 'GET',
             headers: { 'Authorization': `Bearer ${token}` }
         }).then((res) => { return res.json() })
@@ -27,7 +27,7 @@ const UserProfile = (props) => {
 
         var fetchedData = []
         result.data.appointments.map(async (appointmentId) => {
-            var result = await fetch(`http://localhost:3000/api/v1/doctors/bookings/${appointmentId}`, {
+            var result = await fetch(`https://medimate-qdye.onrender.com/api/v1/doctors/bookings/${appointmentId}`, {
                 method: 'GET',
             }).then((res) => { return res.json() })
 
@@ -62,7 +62,7 @@ const UserProfile = (props) => {
         const userId = JSON.parse(localStorage.getItem('user-info')).id
         const token = JSON.parse(localStorage.getItem('user-info')).token
         if (confirm("Are you sure you want to delete the Account")) {
-            var result = await fetch(`http://localhost:3000/api/v1/users/${userId}`, {
+            var result = await fetch(`https://medimate-qdye.onrender.com/api/v1/users/${userId}`, {
                 method: "DELETE",
                 headers: {
                     "Content-Type": 'application/json',
