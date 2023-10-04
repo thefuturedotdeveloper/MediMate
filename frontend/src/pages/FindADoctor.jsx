@@ -8,7 +8,7 @@ const FindADoctor = () => {
         var query = e.target.value
 
         if (query != "") {
-            var result = await fetch(`http://localhost:3000/api/v1/doctors?query=${query}`, {
+            var result = await fetch(`https://medimate-qdye.onrender.com/api/v1/doctors?query=${query}`, {
                 method: "GET"
             }).then((res) => { return res.json() })
 

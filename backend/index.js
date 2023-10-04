@@ -49,5 +49,5 @@ app.use('/api/v1/bookings', bookingRouter) // localhost:3000/api/v1/bookings/
 //Listening To Server
 app.listen(port, () => {
     connectDB()
-    console.log("Server is Running at" +  " http://localhost:" + port)
+    console.log("Server is Running at" +  "https://medimate-qdye.onrender.com/")
 })

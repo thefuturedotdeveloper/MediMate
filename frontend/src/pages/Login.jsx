@@ -30,7 +30,7 @@ const Login = (props) => {
         setLoading(true)
 
         //Handling Registeration
-        const result = await fetch('http://localhost:3000/api/v1/auth/login', {
+        const result = await fetch('https://medimate-qdye.onrender.com/api/v1/auth/login', {
             method: 'POST',
             body: JSON.stringify(formData),
             headers: {

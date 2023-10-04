@@ -65,7 +65,7 @@ const Signup = () => {
         }
 
         //Handling Registeration
-        const result = await fetch('http://localhost:3000/api/v1/auth/register', {
+        const result = await fetch('https://medimate-qdye.onrender.com/api/v1/auth/register', {
             method: 'POST',
             body: JSON.stringify(uploadData),
             headers: {
